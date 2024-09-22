@@ -16,6 +16,25 @@ def get_car(car_id):
     response = requests.get(f'{BASE_URL}/{car_id}')
     return jsonify(response.json())
 
+# Leer los últimos 10 registros de carro ordenados por ID
+@app.route('/cars/latest', methods=['GET'])
+def get_latest_cars_manual():
+    # Hacer una solicitud para obtener todos los registros
+    response = requests.get(BASE_URL)
+
+    if response.status_code == 200:
+        cars = response.json()
+
+        # Asegurarse de que los registros estén ordenados por 'id' de forma ascendente
+        # Si ya están en orden ascendente, simplemente seleccionamos los últimos 10
+        latest_cars = cars[-10:]  # Obtiene los últimos 10 registros
+
+        return jsonify(latest_cars)
+    else:
+        return jsonify({'error': 'No se pudo obtener los datos'}), response.status_code
+
+
+
 # Crear un nuevo registro
 @app.route('/cars', methods=['POST'])
 def create_car():
