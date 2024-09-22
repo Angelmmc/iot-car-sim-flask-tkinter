@@ -1,32 +1,62 @@
 import tkinter as tk
+from datetime import date
+import socket
+import requests
+from flask import Flask, jsonify, request
+
+app = Flask(__name__)
+BASE_URL = 'http://127.0.0.1:5000/cars'
 
 # Funciones que se ejecutarán al presionar los botones
-def iniciar():
-    print("Iniciar presionado")
+def sendInfo(status):
+    hostname = socket.gethostname()
+    custom_car = {
+        "status": status,
+        "date": date.today().strftime("%d/%m/%Y"),
+        "ipClient": socket.gethostbyname(hostname),
+        "name": hostname
+    }
 
-def parar():
+    print(custom_car)
+    response = requests.post(BASE_URL, json=custom_car)
+    return response.json()
+
+
+def izquierda90():
     print("Parar presionado")
+    sendInfo("giro_izquierda_90")
 
-def reiniciar():
+
+def avanzar():
+    print("Parar presionado")
+    sendInfo("avanzar")
+
+def derecha90():
     print("Reiniciar presionado")
+    sendInfo("giro_derecha_90")
 
-def guardar():
+def izquierda():
     print("Guardar presionado")
+    sendInfo("giro_izquierda")
 
-def cargar():
+def detener():
     print("Cargar presionado")
+    sendInfo("detener")
 
-def salir():
+def derecha():
     print("Salir presionado")
+    sendInfo("giro_derecha")
 
-def ayuda():
+def izquierda360():
     print("Ayuda presionado")
+    sendInfo("giro_izquierda_360")
 
-def configurar():
+def historial():
     print("Configurar presionado")
 
-def actualizar():
+def derecha360():
     print("Actualizar presionado")
+    sendInfo("giro_derecha_360")
 
 # Crear la ventana principal
 root = tk.Tk()
@@ -47,8 +77,8 @@ textos_botones = [
 
 # Lista de funciones para cada botón
 funciones_botones = [
-    iniciar, parar, reiniciar, guardar, cargar,
-    salir, ayuda, configurar, actualizar
+    izquierda90, avanzar, derecha90, izquierda, detener,
+    derecha, izquierda360, historial, derecha360
 ]
 
 # Crear y organizar los 9 botones en un layout de 3x3
