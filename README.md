@@ -57,8 +57,8 @@ python desktop_app.py
 ## Usage
 
 Main options
-- **Control Panel**: Use directional buttons to send actions — forward, backward, left, and right — at different angles, and stop, the executed action will be print on the bottom of the screen.
-- **History**: Clic the history button to open another window that displays the actions history ordered from the oldest to the newest.
+- **Control Panel**: Use the directional buttons to send actions — forward, backward, left, and right — at different angles, or stop. The executed action will be displayed at the bottom of the screen.
+- **History**: Click the history button to open a new window that displays the actions executed, ordered from the oldest to the newest.
 
 ## Screenshot
 
