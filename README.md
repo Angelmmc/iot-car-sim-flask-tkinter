@@ -62,7 +62,7 @@ Main options
 
 ## Screenshot
 
-<img src="https://github.com/Angelmmc/iot-car-sim-flask-tkinter/blob/master/assets/img/tkinter_windows.png" alt="App Screen" width="300"/>
+<img src="https://github.com/Angelmmc/iot-car-sim-flask-tkinter/blob/master/assets/img/tkinter_windows.png" alt="App Screen" width="500"/>
 
 ## License
 Distributed under the MIT License. See LICENSE for more information.
