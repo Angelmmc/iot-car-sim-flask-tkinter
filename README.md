@@ -16,7 +16,6 @@ This project is a simulation of remote control for an IoT-based car. It features
 ### Prerequisites
 - Git
 - Python 3.x
-- Rest client software (Postman, Thunder Client)
 
 ###  Installation
 
