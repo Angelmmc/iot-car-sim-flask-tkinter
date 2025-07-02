@@ -61,6 +61,10 @@ Main options
 - **Control Panel**: Use the directional buttons to send actions — forward, backward, left, and right — at different angles, or stop. The executed action will be displayed at the bottom of the screen.
 - **History**: Click the history button to open a new window that displays the actions executed, ordered from the oldest to the newest.
 
+## Screenshot
+
+<img src="https://github.com/Angelmmc/iot-car-sim-flask-tkinter/blob/master/assets/img/tkinter_windows.png" alt="App Screen" width="500"/>
+
 ## License
 Distributed under the MIT License. See LICENSE for more information.
 
