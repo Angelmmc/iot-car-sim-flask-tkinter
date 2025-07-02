@@ -16,6 +16,7 @@ This project is a simulation of remote control for an IoT-based car. It features
 ### Prerequisites
 - Git
 - Python 3.x
+- Rest client software (Postman, Thunder Client)
 
 ###  Installation
 
@@ -55,22 +56,7 @@ python desktop_app.py
 ```
 
 ## Usage
-
-Main options
-- **Control Panel**: Use the directional buttons to send actions — forward, backward, left, and right — at different angles, or stop. The executed action will be displayed at the bottom of the screen.
-- **History**: Click the history button to open a new window that displays the actions executed, ordered from the oldest to the newest.
-
-## Screenshot
-
-<img src="https://github.com/Angelmmc/iot-car-sim-flask-tkinter/blob/master/assets/img/tkinter_windows.png" alt="App Screen" width="500"/>
+Use the route http://localhost:5000/saludo in your REST client software. Test the different responses by switching the HTTP method between GET, POST, PUT and DELETE. For POST and PUT requests, make sure to include a JSON body with the key "name" to properly test the response.
 
 ## License
 Distributed under the MIT License. See LICENSE for more information.
-
-## Related
-
-This was a test practice to develop my iot-car project, check out the related repositories.
-
-[![iot-car-arduino](https://img.shields.io/badge/iot__car-arduino-D68FD6?logo=github)](https://github.com/Angelmmc/iot-car-arduino)
-[![iot-car-frontend-mobile](https://img.shields.io/badge/iot__car-frontend--mobile-E76F51?logo=github)](https://github.com/Angelmmc/iot-car-frontend-mobile)
-[![iot-car-webapp](https://img.shields.io/badge/iot__car-webapp-05F140?logo=github)](https://github.com/Angelmmc/iot-car-webapp)
